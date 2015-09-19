@@ -1,0 +1,40 @@
+function enhanced_pwd() {
+  # Same as %~ but doesn't replace env vars
+  echo "${PWD/$HOME/~}"
+}
+
+function git_info() {
+  # Attempt to get the current branch/SHA1; return if not in a git repo
+  ref=$(git symbolic-ref HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null) || return
+  ref=${ref#refs/heads/}
+  st=$(git status --porcelain 2> /dev/null)
+  # Show the current branch, colored depending on the repo's status
+  if [[ $(echo $st | grep -c '^ M') > 0 ]]; then
+    # Uncomitted changes
+    echo " on %{$fg[yellow]%}$ref%{$reset_color%}"
+  elif [[ $(echo $st | grep -c '^??') > 0 ]]; then
+    # Untracked files
+    echo " on %{$fg[red]%}$ref%{$reset_color%}"
+  else
+    echo " on %{$fg[green]%}$ref%{$reset_color%}"
+  fi
+}
+
+function ruby_info() {
+  # Show the current rbenv ruby, if set for shell/locally
+  if [[ -n $RBENV_VERSION || -n $(rbenv local 2> /dev/null) ]]; then
+    echo " with %{$fg[red]%}ruby $(rbenv version-name)%{$reset_color%}"
+  fi
+}
+
+function python_info() {
+  # Show the current virtualenv for python, if any is set
+  if [[ -n $VIRTUAL_ENV ]]; then
+    echo " in %{$fg[blue]%}python venv $(basename $VIRTUAL_ENV)%{$reset_color%}"
+  fi
+}
+
+# Have a nicer prompt: USER at HOST in PWD[ on GIT][ with RUBY][ in VENV]
+PROMPT='
+%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%} in %{$fg[yellow]%}$(enhanced_pwd)%{$reset_color%}$(git_info)$(ruby_info)$(python_info)
+%(?:$ :%{$fg[red]%}!%{$reset_color%} )'

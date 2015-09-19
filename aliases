@@ -1,0 +1,19 @@
+# Navigate easier through parent directories
+alias -g ...='../..'
+alias -g ....='../../../'
+alias -g .....='../../../..'
+
+# System
+alias grep='grep --color=auto --exclude-dir=.git'
+alias ls='ls -G'
+alias l='ls -lAh'
+
+# Git
+alias glp='git log --pretty=format:"%Cred%h%Creset - %s%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+alias glpg='glp --graph'
+
+# Handy commands
+alias reload='. ~/.zshrc'
+alias newest-dir='ls -ld *(/om[1])'
+alias modified-today='print *(e:age today now:)'
+alias top-commands='print -l -- ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
