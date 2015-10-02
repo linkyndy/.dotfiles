@@ -1,0 +1,35 @@
+function bbspec () {
+  bundle exec foreman run -e .env-aio.test rspec ${1:=spec}
+}
+
+function bbmig () {
+  echo 'Migrating dev db...'
+  bundle exec foreman run -e .env-aio.dev rake db:schema:load
+  echo 'Migrating test db...'
+  bundle exec foreman run -e .env-aio.test rake db:schema:load
+  echo 'Done migrating!'
+}
+
+function bbseed () {
+  echo 'Seeding dev db...'
+  bundle exec foreman run -e .env-aio.dev rake db:seed
+  echo 'Creating user in dev db...'
+  bundle exec foreman run -e .env-aio.dev rake create_user email=andrei.horak@unifiedpost.com username=andrei.horak profile=sec1
+  echo 'Done seeding!'
+}
+
+function bbupdate () {
+  echo 'Checking out master and rebasing it with the latest changes...'
+  CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  git checkout master
+  git pull --rebase
+  git checkout $CURRENT_BRANCH
+  echo 'Running bundle install...'
+  bundle install
+  bbmig
+  echo 'Creating rules...'
+  bundle exec foreman run -e .env-aio.dev rake aaa:create_rules
+  echo 'Updating users...'
+  bundle exec foreman run -e .env-aio.dev rake update_users
+  echo 'Done!'
+}

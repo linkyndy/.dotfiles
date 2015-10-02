@@ -17,3 +17,6 @@ alias reload='. ~/.zshrc'
 alias newest-dir='ls -ld *(/om[1])'
 alias modified-today='print *(e:age today now:)'
 alias top-commands='print -l -- ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
+
+# Borrowing Base aliases
+. ~/.dotfiles/projects/borrowing_base/aliases

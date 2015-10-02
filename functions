@@ -1,3 +1,6 @@
 function ip() {
   curl -s -S https://icanhazip.com
 }
+
+# Borrowing Base aliases
+. ~/.dotfiles/projects/borrowing_base/functions
