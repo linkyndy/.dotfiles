@@ -1,9 +1,9 @@
-function enhanced_pwd() {
+enhanced_pwd() {
   # Same as %~ but doesn't replace env vars
   echo "${PWD/$HOME/~}"
 }
 
-function git_info() {
+git_info() {
   # Attempt to get the current branch/SHA1; return if not in a git repo
   ref=$(current-branch) || return
   st=$(git status --porcelain 2> /dev/null)
@@ -19,14 +19,14 @@ function git_info() {
   fi
 }
 
-function ruby_info() {
+ruby_info() {
   # Show the current rbenv ruby, if set for shell/locally
   if [[ -n $RBENV_VERSION || -n $(rbenv local 2> /dev/null) ]]; then
     echo " with %{$fg[red]%}ruby $(rbenv version-name)%{$reset_color%}"
   fi
 }
 
-function python_info() {
+python_info() {
   # Show the current virtualenv for python, if any is set
   if [[ -n $VIRTUAL_ENV ]]; then
     echo " in %{$fg[blue]%}python venv $(basename $VIRTUAL_ENV)%{$reset_color%}"

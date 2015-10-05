@@ -1,3 +1,7 @@
+###########
+# GENERAL #
+###########
+
 dotfiles-up() {
   cd ~/.dotfiles
   git stash && git pull --rebase && git stash pop
@@ -13,17 +17,21 @@ mkcd() {
   cd "$*"
 }
 
-function ip() {
+ip() {
   curl -s -S https://icanhazip.com
 }
 
-function current-branch() {
+#######
+# GIT #
+#######
+
+current-branch() {
   # Print the current branch/SHA1; returns if not in a git repo
   ref=$(git symbolic-ref HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null) || return
   echo ${ref#refs/heads/}
 }
 
-function gdm() {
+gdm() {
   git diff --name-only master..$(current-branch)
 }
 

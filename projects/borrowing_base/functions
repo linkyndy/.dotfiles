@@ -1,8 +1,8 @@
-function bbspec () {
+bbspec () {
   bundle exec foreman run -e .env-aio.test rspec ${1:=spec}
 }
 
-function bbmig () {
+bbmig () {
   echo 'Migrating dev db...'
   bundle exec foreman run -e .env-aio.dev rake db:schema:load
   echo 'Migrating test db...'
@@ -10,7 +10,7 @@ function bbmig () {
   echo 'Done migrating!'
 }
 
-function bbseed () {
+bbseed () {
   echo 'Seeding dev db...'
   bundle exec foreman run -e .env-aio.dev rake db:seed
   echo 'Creating user in dev db...'
@@ -18,7 +18,7 @@ function bbseed () {
   echo 'Done seeding!'
 }
 
-function bbupdate () {
+bbupdate () {
   echo 'Checking out master and rebasing it with the latest changes...'
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
   git checkout master
