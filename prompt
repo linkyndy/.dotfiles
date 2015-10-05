@@ -5,8 +5,7 @@ function enhanced_pwd() {
 
 function git_info() {
   # Attempt to get the current branch/SHA1; return if not in a git repo
-  ref=$(git symbolic-ref HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null) || return
-  ref=${ref#refs/heads/}
+  ref=$(current_branch) || return
   st=$(git status --porcelain 2> /dev/null)
   # Show the current branch, colored depending on the repo's status
   if [[ $(echo $st | grep -c '^ M') > 0 ]]; then

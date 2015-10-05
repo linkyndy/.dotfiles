@@ -2,10 +2,14 @@ function ip() {
   curl -s -S https://icanhazip.com
 }
 
-function gdm() {
-  # Print a diff between master and the current branch/SHA1; return if not in a git repo
+function current_branch() {
+  # Print the current branch/SHA1; returns if not in a git repo
   ref=$(git symbolic-ref HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null) || return
-  git diff --name-only master..$ref
+  echo ${ref#refs/heads/}
+}
+
+function gdm() {
+  git diff --name-only master..$(current_branch)
 }
 
 # Borrowing Base aliases
