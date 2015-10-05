@@ -8,6 +8,11 @@ dotfiles-edit() {
   atom ~/.dotfiles
 }
 
+mkcd() {
+  mkdir -p "$*"
+  cd "$*"
+}
+
 function ip() {
   curl -s -S https://icanhazip.com
 }
