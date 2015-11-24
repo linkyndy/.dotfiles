@@ -11,10 +11,10 @@ echo "Updating Homebrew formulae..."
 brew update 2>/dev/null
 
 echo "Installing prerequisites..."
-if [ -z $(brew list -1 | grep -i "git") ]; then
+if ! brew list -1 | grep -q "git"; then
   brew install git
 fi
-if [ -z $(brew tap | grep -i "Homebrew/bundle") ]; then
+if ! brew tap | grep -q "homebrew/bundle"; then
   brew tap "Homebrew/bundle"
 fi
 
