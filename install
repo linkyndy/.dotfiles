@@ -32,6 +32,24 @@ ln -sf "$HOME/.dotfiles/.Brewfile" "$HOME"
 echo "Installing Homebrew Bundle formulae..."
 brew bundle --global
 
+if ! rbenv versions | grep -q "2.2.3"; then
+  echo "Installing Ruby 2.2.3..."
+  rbenv install -s "2.2.3"
+else
+  echo "Ruby 2.2.3 already installed"
+fi
+
+echo "Updating RubyGems..."
+gem update --system
+
+if ! gem list | grep -q "bundler"; then
+  echo "Installing Bundler..."
+  gem install bundler
+else
+  echo "Updating Bundler..."
+  gem update bundler
+fi
+
 case "$SHELL" in
   */zsh) : ;;
   *)
