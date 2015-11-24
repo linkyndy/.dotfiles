@@ -1,0 +1,41 @@
+if ! type "brew" >/dev/null; then
+  echo "Installing Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo "Homebrew already installed"
+fi
+
+echo "Updating Homebrew formulae..."
+brew update 2>/dev/null
+
+echo "Installing prerequisites..."
+if [ -z $(brew list -1 | grep -i "git") ]; then
+  brew install git
+fi
+if [ -z $(brew tap | grep -i "Homebrew/bundle") ]; then
+  brew tap "Homebrew/bundle"
+fi
+
+if [ ! -d "$HOME/.dotfiles" ]; then
+  echo "Cloning dotfiles..."
+  git clone "https://github.com/linkyndy/.dotfiles.git" "$HOME/.dotfiles"
+else
+  echo "Dotfiles already cloned"
+fi
+
+echo "Symlinking dotfiles..."
+ln -sf "$HOME/.dotfiles/.zshrc" "$HOME"
+ln -sf "$HOME/.dotfiles/.Brewfile" "$HOME"
+
+echo "Installing Homebrew Bundle formulae..."
+brew bundle --global
+
+case "$SHELL" in
+  */zsh) : ;;
+  *)
+    echo "Changing the shell to zsh..."
+    chsh -s "$(which zsh)"
+    ;;
+esac
+
+cowsay 'Mac is set up!'
