@@ -1,0 +1,28 @@
+"*":
+  "exception-reporting":
+    userId: "f59eff71-ec20-7c06-2f8a-4b6bb70e90c3"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+    disabledPackages: [
+      "bookmarks"
+      "dev-live-reload"
+      "markdown-preview"
+      "package-generator"
+    ]
+    projectHome: "/Users/linkyndy/GitHub"
+  editor:
+    fontFamily: "Monaco, Inconsolata, Consolas, 'Courier New', Courier"
+    softWrap: true
+    showIndentGuide: true
+    invisibles: {}
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  autosave:
+    enabled: true
+  "highlight-selected": {}
