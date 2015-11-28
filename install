@@ -8,7 +8,7 @@ else
 fi
 
 echo "Updating Homebrew formulae..."
-brew update 2>/dev/null
+brew update
 
 echo "Installing prerequisites..."
 if ! brew list -1 | grep -q "git"; then
@@ -46,6 +46,9 @@ if ! rbenv versions | grep -q "2.2.3"; then
 else
   echo "Ruby 2.2.3 already installed"
 fi
+
+echo "Setting default Ruby..."
+rbenv global "2.2.3"
 
 echo "Updating RubyGems..."
 gem update --system
