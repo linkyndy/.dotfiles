@@ -33,6 +33,13 @@ ln -sfF "$HOME/.dotfiles/.atom" "$HOME"
 echo "Installing Homebrew Bundle formulae..."
 brew bundle --global
 
+if [ ! $(apm list --installed --bare | sed '/^$/d' | wc -l) -eq $(cat "$HOME/.dotfiles/.atom/packages.txt" | wc -l) ]; then
+  echo "Installing Atom packages..."
+  apm install --packages-file "$HOME/.dotfiles/.atom/packages.txt"
+else
+  echo "Atom packages already installed"
+fi
+
 if ! rbenv versions | grep -q "2.2.3"; then
   echo "Installing Ruby 2.2.3..."
   rbenv install -s "2.2.3"
