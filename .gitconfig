@@ -1,0 +1,51 @@
+[user]
+	name = Andrei Horak
+	email = linkyndy@gmail.com
+[alias]
+	branches = branch -a
+	# View who contributed together with number of commits
+	contributors = shortlog --summary --numbered
+	# Show the logs in a nice format
+	pretty = "log --pretty=format:'%Cred%h%Creset - %s%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+	remotes = remote -v
+	# What did I do yesterday?
+	scrum = "!git pretty --since='yesterday at 8:00' --author=\"$(git config user.name)\""
+[apply]
+	# Fix whitespace issues when applying patches
+	whitespace = fix
+[color]
+	ui = true
+[credential]
+	helper = osxkeychain
+[core]
+	editor = vi
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[difftool "Kaleidoscope"]
+	cmd = "ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\""
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[merge]
+	tool = Kaleidoscope
+[mergetool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = "ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot"
+	trustExitCode = true
+[push]
+	# Push the current branch to update a branch with the same name on the receiving end
+	default = current
+	# Push tags also
+	followTags = true

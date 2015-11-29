@@ -27,6 +27,7 @@ fi
 
 echo "Symlinking dotfiles..."
 ln -sf "$HOME/.dotfiles/.zshrc" "$HOME"
+ln -sf "$HOME/.dotfiles/.gitconfig" "$HOME"
 ln -sf "$HOME/.dotfiles/.Brewfile" "$HOME"
 ln -sfF "$HOME/.dotfiles/.atom" "$HOME"
 
