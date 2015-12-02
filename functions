@@ -21,6 +21,10 @@ ip() {
   curl -s -S https://icanhazip.com
 }
 
+public-key() {
+  cat ~/.ssh/id_rsa.pub
+}
+
 #######
 # GIT #
 #######
