@@ -59,15 +59,15 @@ bindkey -e
 # Completion #
 ##############
 
+# Activate zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # Configure completion
 autoload -Uz compinit
 compinit
 
 # Use arrow keys for completion
 zstyle ':completion:*' menu select
-
-# Activate zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
 
 ##########
 # Prompt #
