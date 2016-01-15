@@ -69,6 +69,26 @@ compinit
 # Use arrow keys for completion
 zstyle ':completion:*' menu select
 
+#########
+# Hooks #
+#########
+
+# This also helps keeping the same directory when opening a new tab
+
+precmd () {
+  # Set tab title
+  print -Pn "\e]1;%~\a"
+  # Set window title
+  print -Pn "\e]2;%n@%m: %~\a"
+}
+
+preexec () {
+  # Set tab title
+  print -Pn "\e]1;%~\a"
+  # Set window title
+  print -Pn "\e]2;%n@%m: %~\a"
+}
+
 ##########
 # Prompt #
 ##########
