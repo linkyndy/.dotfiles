@@ -4,9 +4,9 @@ bbspec () {
 
 bbmig () {
   echo 'Migrating dev db...'
-  bundle exec foreman run -e .env-aio.dev rake db:schema:load
+  bundle exec foreman run -e .env-aio.dev rake db:migrate
   echo 'Migrating test db...'
-  bundle exec foreman run -e .env-aio.test rake db:schema:load
+  bundle exec foreman run -e .env-aio.test rake db:migrate
   echo 'Done migrating!'
 }
 
