@@ -56,6 +56,7 @@ brew 'python3'
 brew 'node'
 
 # Nice-to-have
+brew 'git-standup'
 brew 'hub'
 brew 'httpie'
 brew 'tree'

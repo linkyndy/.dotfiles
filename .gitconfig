@@ -9,7 +9,7 @@
 	pretty = "log --pretty=format:'%Cred%h%Creset - %s%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 	remotes = remote -v
 	# What did I do yesterday?
-	scrum = "!git pretty --since='yesterday at 8:00' --author=\"$(git config user.name)\""
+	scrum = "!git standup"
 [apply]
 	# Fix whitespace issues when applying patches
 	whitespace = fix
