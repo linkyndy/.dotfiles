@@ -18,7 +18,7 @@ mkcd() {
 }
 
 ip() {
-  curl -s -S https://icanhazip.com
+  curl -s -S https://api.ipify.org
 }
 
 public-key() {
