@@ -39,7 +39,7 @@ cask 'kitematic'
 # Databases/datastores
 brew 'postgresql' , restart_service: true
 brew 'redis'      , restart_service: true
-brew 'rethinkdb'  , restart_service: true
+brew 'rethinkdb'
 brew 'sqlite'
 
 # Ruby
