@@ -43,8 +43,8 @@ setopt nomatch
 # Ignores lines starting with '#'
 setopt interactivecomments
 
-# Enable spelling correction for commands and arguments
-setopt correctall
+# Disable spelling correction for commands and arguments
+unsetopt correctall
 
 # Don't accidentally overwrite files. Use `>!` instead of `>` if you really want to
 setopt noclobber
