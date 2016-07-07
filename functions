@@ -18,7 +18,10 @@ mkcd() {
 }
 
 ip() {
-  curl -s -S https://api.ipify.org
+  loc=$(ipconfig getifaddr en0)
+  pub=$(curl -s -S https://api.ipify.org)
+  echo "Local : ${loc:=-}"
+  echo "Public: ${pub:=-}"
 }
 
 public-key() {
