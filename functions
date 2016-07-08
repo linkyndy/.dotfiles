@@ -25,7 +25,7 @@ ip() {
 }
 
 public-key() {
-  cat ~/.ssh/id_rsa.pub
+  cat ~/.ssh/id_rsa.pub | tee >(pbcopy)
 }
 
 #######
