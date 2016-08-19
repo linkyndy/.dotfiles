@@ -24,6 +24,10 @@ ip() {
   echo "Public: ${pub:=-}"
 }
 
+ports() {
+  lsof -iTCP -sTCP:LISTEN -P
+}
+
 public-key() {
   cat ~/.ssh/id_rsa.pub | tee >(pbcopy)
 }

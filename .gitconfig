@@ -3,6 +3,7 @@
 	email = linkyndy@gmail.com
 [alias]
 	branches = branch -a
+	tags = tag -l
 	# View who contributed together with number of commits
 	contributors = shortlog --summary --numbered
 	# Show the logs in a nice format
