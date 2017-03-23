@@ -1,4 +1,4 @@
-# Enable virtualenvwrapper and remove default prompt
-VIRTUAL_ENV_DISABLE_PROMPT=1
-export WORKON_HOME=$HOME/virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
+# Enable shims and autocompletion for pyenv and pyenv-virtualenv and remove default prompt
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

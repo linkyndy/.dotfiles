@@ -27,13 +27,13 @@ ruby_info() {
 }
 
 python_info() {
-  # Show the current virtualenv for python, if any is set
-  if [[ -n $VIRTUAL_ENV ]]; then
-    echo " in %{$fg[blue]%}python venv $(basename $VIRTUAL_ENV)%{$reset_color%}"
+  # Show the current pyenv python/virtualenv, if set for shell/locally
+  if [[ -n $PYENV_VERSION || -n $(pyenv local 2> /dev/null) ]]; then
+    echo " with %{$fg[blue]%}python $(pyenv version-name)%{$reset_color%}"
   fi
 }
 
-# Have a nicer prompt: USER at HOST in PWD[ on GIT][ with RUBY][ in VENV]
+# Have a nicer prompt: USER at HOST in PWD[ on GIT][ with RUBY][ with PYTHON]
 PROMPT='
 %{$fg[magenta]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%} in %{$fg[yellow]%}$(enhanced_pwd)%{$reset_color%}$(git_info)$(ruby_info)$(python_info)
 %(?:$ :%{$fg[red]%}!%{$reset_color%} )'

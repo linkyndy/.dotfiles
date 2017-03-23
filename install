@@ -63,6 +63,16 @@ else
   gem update bundler
 fi
 
+if ! pyenv versions | grep -q "2.7.13"; then
+  echo "Installing Python 2.7.13..."
+  pyenv install -s "2.7.13"
+else
+  echo "Python 2.7.13 already installed"
+fi
+
+echo "Setting default Python..."
+pyenv global "2.7.13"
+
 case "$SHELL" in
   */zsh) : ;;
   *)

@@ -49,8 +49,8 @@ brew 'libyaml'
 brew 'qt'
 
 # Python
-brew 'python'
-brew 'python3'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
 
 # JavaScript
 brew 'node'
