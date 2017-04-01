@@ -26,6 +26,10 @@ alias gd='git diff'
 alias glps='git pretty -n 10'
 alias glpg='git pretty --graph'
 
+# Ruby
+alias b='bundle'
+alias be='bundle exec'
+
 # Handy commands
 alias reload='. ~/.zshrc'
 alias brup='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
