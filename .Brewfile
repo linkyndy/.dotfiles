@@ -3,8 +3,8 @@ cask_args appdir: '/Applications'
 
 # Pretty pointless, allows usage of this Brewfile
 tap 'homebrew/bundle'
-# So we can install scientific Python packages with ease
-tap 'homebrew/python'
+# So we can install scientific packages with ease
+tap 'homebrew/science'
 # Allows `brew services redis start`
 tap 'homebrew/services'
 # Install different package versions
@@ -15,8 +15,10 @@ tap 'caskroom/cask'
 # Vitals
 brew 'git'
 brew 'ctags'
+brew 'dnsmasq' # Start service with sudo
 brew 'gcc'
 brew 'imagemagick'
+brew 'nginx' # Start service with sudo
 brew 'openssl'
 cask 'flux'
 cask 'atom'
@@ -27,7 +29,7 @@ brew 'zsh-completions'
 
 # Iaas/Paas
 brew 'awscli'
-brew 'heroku-toolbelt'
+brew 'heroku'
 
 # Docker
 brew 'docker'
@@ -41,6 +43,7 @@ brew 'postgresql' , restart_service: true
 brew 'redis'      , restart_service: true
 brew 'rethinkdb'
 brew 'sqlite'
+cask 'postico'
 
 # Ruby
 brew 'ruby-build'
@@ -58,7 +61,10 @@ brew 'node'
 # Nice-to-have
 brew 'git-standup'
 brew 'hub'
+brew 'htop'
 brew 'httpie'
+brew 'spark'
+brew 'tldr'
 brew 'tree'
 brew 'watch'
 brew 'the_silver_searcher'
@@ -69,8 +75,10 @@ brew 'hr'
 brew 'spark'
 
 # Apps
+cask 'kaleidoscope'
+cask 'slack'
+cask 'tower'
 cask 'virtualbox'
-cask 'github-desktop'
 
 # X11
 tap 'homebrew/x11'
