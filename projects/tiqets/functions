@@ -1,0 +1,9 @@
+tiq () {
+  cd ~/Tiqets/tiqetsweb
+  make run_local
+}
+
+tiqa () {
+  cd ~/Tiqets/tiqetsweb/admin
+  make run_local
+}

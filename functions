@@ -93,5 +93,8 @@ gdm() {
   git diff --name-only master..$(current-branch)
 }
 
-# Borrowing Base aliases
+# Borrowing Base functions
 . ~/.dotfiles/projects/borrowing_base/functions
+
+# Tiqets functions
+. ~/.dotfiles/projects/tiqets/functions

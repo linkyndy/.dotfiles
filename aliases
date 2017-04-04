@@ -39,3 +39,6 @@ alias top-commands='print -l -- ${(o)history%% *} | uniq -c | sort -nr | head -n
 
 # Borrowing Base aliases
 . ~/.dotfiles/projects/borrowing_base/aliases
+
+# Tiqets aliases
+. ~/.dotfiles/projects/tiqets/aliases
