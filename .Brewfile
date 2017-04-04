@@ -44,6 +44,7 @@ brew 'redis'      , restart_service: true
 brew 'rethinkdb'
 brew 'sqlite'
 cask 'postico'
+cask 'medis'
 
 # Ruby
 brew 'ruby-build'
@@ -68,6 +69,7 @@ brew 'tldr'
 brew 'tree'
 brew 'watch'
 brew 'the_silver_searcher'
+cask 'ngrok'
 
 # Fun
 brew 'cowsay'
