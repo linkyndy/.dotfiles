@@ -70,6 +70,7 @@ brew 'tree'
 brew 'watch'
 brew 'the_silver_searcher'
 cask 'ngrok'
+cask 'shimo'
 
 # Fun
 brew 'cowsay'
