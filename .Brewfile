@@ -78,6 +78,8 @@ brew 'hr'
 brew 'spark'
 
 # Apps
+cask 'firefox'
+cask 'google-chrome'
 cask 'kaleidoscope'
 cask 'slack'
 cask 'tower'
