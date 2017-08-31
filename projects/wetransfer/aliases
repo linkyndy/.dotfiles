@@ -1,3 +1,0 @@
-# Use older versions for imagemagick and mysql
-export PATH=$PATH:$(brew --prefix imagemagick@6)/bin
-export PATH=$PATH:$(brew --prefix mysql@5.6)/bin

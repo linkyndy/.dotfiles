@@ -1,4 +1,2 @@
-export UPNXT_GEM_SOURCE="https://gem.all-in-one.apps.up-nxt.com"
-
 alias bbc='bundle exec foreman run -e .env-aio.dev rails c'
 alias bbs='bundle exec foreman run -e .env-aio.dev rails s'

@@ -1,0 +1,12 @@
+# Enable direnv to automatically load .envrc files when cd-ing into a dir
+# TIP: If you want to use .env files, just do a `echo "dotenv" > .envrc` before
+eval "$(direnv hook zsh)"
+
+# Borrowing Base misc
+. ~/.dotfiles/projects/borrowing_base/misc
+
+# Tiqets misc
+. ~/.dotfiles/projects/tiqets/misc
+
+# WeTransfer misc
+. ~/.dotfiles/projects/wetransfer/misc

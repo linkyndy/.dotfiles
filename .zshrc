@@ -16,6 +16,7 @@ autoload -U age
 
 . ~/.dotfiles/aliases
 . ~/.dotfiles/functions
+. ~/.dotfiles/misc
 
 ###########
 # History #
