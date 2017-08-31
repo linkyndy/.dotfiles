@@ -33,7 +33,14 @@ python_info() {
   fi
 }
 
+elixir_info() {
+  # Show the current exenv elixir, if set for shell/locally
+  if [[ -n $EXENV_VERSION || -n $(exenv local 2> /dev/null) ]]; then
+    echo " with %{$fg[magenta]%}elixir $(exenv version-name)%{$reset_color%}"
+  fi
+}
+
 # Have a nicer prompt: USER at HOST in PWD[ on GIT][ with RUBY][ with PYTHON]
 PROMPT='
-%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%} in %{$fg[yellow]%}$(enhanced_pwd)%{$reset_color%}$(git_info)$(ruby_info)$(python_info)
+%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%} in %{$fg[yellow]%}$(enhanced_pwd)%{$reset_color%}$(git_info)$(ruby_info)$(python_info)$(elixir_info)
 %(?:$ :%{$fg[red]%}!%{$reset_color%} )'

@@ -73,6 +73,16 @@ fi
 echo "Setting default Python..."
 pyenv global "2.7.13"
 
+if ! exenv versions | grep -q "1.5.1"; then
+  echo "Installing Elixir 1.5.1..."
+  exenv install -s "1.5.1"
+else
+  echo "Elixir 1.5.1 already installed"
+fi
+
+echo "Setting default Elixir..."
+exenv global "1.5.1"
+
 case "$SHELL" in
   */zsh) : ;;
   *)

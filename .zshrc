@@ -101,3 +101,4 @@ preexec () {
 
 . ~/.dotfiles/ruby
 . ~/.dotfiles/python
+. ~/.dotfiles/elixir

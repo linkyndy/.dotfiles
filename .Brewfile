@@ -56,6 +56,10 @@ brew 'qt'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 
+# Elixir
+brew 'exenv'
+brew 'elixir-build'
+
 # JavaScript
 brew 'node'
 
