@@ -7,6 +7,9 @@
       "bookmarks"
       "dev-live-reload"
       "package-generator"
+      "github"
+      "spell-check"
+      "metrics"
     ]
     projectHome: "/Users/linkyndy/GitHub"
     telemetryConsent: "limited"
