@@ -33,7 +33,7 @@ alias be='bundle exec'
 # Handy commands
 alias reload='. ~/.zshrc'
 alias path='echo $PATH | tr -s ":" "\n"'
-alias brup='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
+alias brup='brew update && brew upgrade --ignore-pinned && brew cleanup && brew prune && brew doctor'
 alias newest-dir='ls -ld *(/om[1])'
 alias modified-today='print *(e:age today now:)'
 alias top-commands='print -l -- ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
