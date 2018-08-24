@@ -73,6 +73,7 @@ brew 'tldr'
 brew 'tree'
 brew 'watch'
 brew 'the_silver_searcher'
+brew 'wrk'
 cask 'ngrok'
 cask 'shimo'
 
@@ -80,6 +81,7 @@ cask 'shimo'
 brew 'cowsay'
 brew 'hr'
 brew 'spark'
+cask 'muzzle'
 
 # Apps
 cask 'firefox'
