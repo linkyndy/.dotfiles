@@ -76,6 +76,7 @@ cask 'firefox'
 cask 'google-chrome'
 cask 'kaleidoscope'
 cask 'slack'
+cask 'spotify'
 cask 'tower'
 cask 'virtualbox'
 
