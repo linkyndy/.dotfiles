@@ -32,6 +32,9 @@ ln -sf "$HOME/.dotfiles/.gitconfig" "$HOME"
 ln -sf "$HOME/.dotfiles/.Brewfile" "$HOME"
 ln -sfF "$HOME/.dotfiles/.atom" "$HOME"
 
+echo "Configuring macOS..."
+. "$HOME/.dotfiles/macos"
+
 echo "Installing Homebrew Bundle formulae..."
 brew bundle --global
 
