@@ -1,17 +1,6 @@
 # Install apps to /Applications
 cask_args appdir: '/Applications'
 
-# Pretty pointless, allows usage of this Brewfile
-tap 'homebrew/bundle'
-# So we can install scientific packages with ease
-tap 'homebrew/science'
-# Allows `brew services redis start`
-tap 'homebrew/services'
-# Install different package versions
-tap 'homebrew/versions'
-# Install apps
-tap 'caskroom/cask'
-
 # Vitals
 brew 'git'
 brew 'ctags'
