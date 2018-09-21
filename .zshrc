@@ -26,7 +26,7 @@ autoload -U age
 HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=100000
-setopt appendhistory
+setopt incappendhistory
 
 #######
 # ZSH #
