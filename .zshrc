@@ -100,6 +100,7 @@ preexec () {
 # Misc #
 ########
 
+. ~/.dotfiles/macos
 . ~/.dotfiles/ruby
 . ~/.dotfiles/python
 . ~/.dotfiles/elixir
