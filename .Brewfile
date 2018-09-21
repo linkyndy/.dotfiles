@@ -9,7 +9,6 @@ brew 'gcc'
 brew 'imagemagick'
 brew 'nginx' # Start service with sudo
 brew 'openssl'
-cask 'flux'
 cask 'atom'
 
 # ZSH
