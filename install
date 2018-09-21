@@ -1,5 +1,9 @@
 #!/bin/sh
 
+ruby_version="2.4.4"
+python_version="2.7.15"
+elixir_version="1.7.3"
+
 if ! command -v brew >/dev/null; then
   echo "Installing Homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -45,15 +49,15 @@ else
   echo "Atom packages already installed"
 fi
 
-if ! rbenv versions | grep -q "2.2.3"; then
-  echo "Installing Ruby 2.2.3..."
-  rbenv install -s "2.2.3"
+if ! rbenv versions | grep -q "$ruby_version"; then
+  echo "Installing Ruby $ruby_version..."
+  rbenv install -s "$ruby_version"
 else
-  echo "Ruby 2.2.3 already installed"
+  echo "Ruby $ruby_version already installed"
 fi
 
 echo "Setting default Ruby..."
-rbenv global "2.2.3"
+rbenv global "$ruby_version"
 
 echo "Updating RubyGems..."
 gem update --system
@@ -66,25 +70,25 @@ else
   gem update bundler
 fi
 
-if ! pyenv versions | grep -q "2.7.13"; then
-  echo "Installing Python 2.7.13..."
-  pyenv install -s "2.7.13"
+if ! pyenv versions | grep -q "$python_version"; then
+  echo "Installing Python $python_version..."
+  pyenv install -s "$python_version"
 else
-  echo "Python 2.7.13 already installed"
+  echo "Python $python_version already installed"
 fi
 
 echo "Setting default Python..."
-pyenv global "2.7.13"
+pyenv global "$python_version"
 
-if ! exenv versions | grep -q "1.5.1"; then
-  echo "Installing Elixir 1.5.1..."
-  exenv install -s "1.5.1"
+if ! exenv versions | grep -q "$elixir_version"; then
+  echo "Installing Elixir $elixir_version..."
+  exenv install "$elixir_version"
 else
-  echo "Elixir 1.5.1 already installed"
+  echo "Elixir $elixir_version already installed"
 fi
 
 echo "Setting default Elixir..."
-exenv global "1.5.1"
+exenv global "$elixir_version"
 
 case "$SHELL" in
   */zsh) : ;;
