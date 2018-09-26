@@ -25,7 +25,7 @@ autoload -U age
 # Configure history
 HISTFILE=~/.zhistory
 HISTSIZE=10000
-SAVEHIST=100000
+SAVEHIST=50000
 setopt incappendhistory
 
 #######
