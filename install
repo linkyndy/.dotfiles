@@ -3,6 +3,7 @@
 ruby_version="2.4.4"
 python_version="2.7.15"
 elixir_version="1.7.3"
+nodenv_version="8.11.4"
 
 if ! command -v brew >/dev/null; then
   echo "Installing Homebrew..."
@@ -89,6 +90,16 @@ fi
 
 echo "Setting default Elixir..."
 exenv global "$elixir_version"
+
+if ! nodenv versions | grep -q "$nodenv_version"; then
+  echo "Installing Node $nodenv_version..."
+  nodenv install "$nodenv_version"
+else
+  echo "Node $nodenv_version already installed"
+fi
+
+echo "Setting default Node..."
+nodenv global "$nodenv_version"
 
 case "$SHELL" in
   */zsh) : ;;

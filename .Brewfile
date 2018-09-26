@@ -49,7 +49,7 @@ brew 'exenv'
 brew 'elixir-build'
 
 # JavaScript
-brew 'node'
+brew 'nodenv'
 
 # Nice-to-have
 brew 'git-standup'

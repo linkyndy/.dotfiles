@@ -1,0 +1,2 @@
+# Enable shims and autocompletion for rbenv
+eval "$(nodenv init -)"
