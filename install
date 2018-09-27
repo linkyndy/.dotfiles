@@ -19,9 +19,6 @@ echo "Installing prerequisites..."
 if ! brew list -1 | grep -q "git"; then
   brew install git
 fi
-if ! brew tap | grep -q "homebrew/bundle"; then
-  brew tap "Homebrew/bundle"
-fi
 
 if [ ! -d "$HOME/.dotfiles" ]; then
   echo "Cloning dotfiles..."

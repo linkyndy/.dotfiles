@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 
 # Vitals
 brew 'git'
+brew 'coreutils'
 brew 'ctags'
 brew 'dnsmasq' # Start service with sudo
 brew 'gcc'
@@ -10,6 +11,7 @@ brew 'imagemagick'
 brew 'nginx' # Start service with sudo
 brew 'openssl'
 cask 'atom'
+cask 'iterm2'
 
 # ZSH
 brew 'zsh'
@@ -21,18 +23,17 @@ brew 'heroku'
 
 # Docker
 brew 'docker'
-brew 'boot2docker'
 brew 'docker-machine'
 brew 'docker-compose'
-cask 'kitematic'
 
 # Databases/datastores
+brew 'mysql'      , restart_service: true
 brew 'postgresql' , restart_service: true
 brew 'redis'      , restart_service: true
 brew 'rethinkdb'
 brew 'sqlite'
 cask 'postico'
-cask 'medis'
+cask 'sequel-pro'
 
 # Ruby
 brew 'ruby-build'
@@ -62,6 +63,7 @@ brew 'tree'
 brew 'watch'
 brew 'the_silver_searcher'
 brew 'wrk'
+cask 'insomnia'
 cask 'ngrok'
 cask 'shimo'
 
@@ -69,9 +71,9 @@ cask 'shimo'
 brew 'cowsay'
 brew 'hr'
 brew 'spark'
-cask 'muzzle'
 
 # Apps
+cask 'caret'
 cask 'firefox'
 cask 'google-chrome'
 cask 'kaleidoscope'
@@ -79,6 +81,7 @@ cask 'slack'
 cask 'spotify'
 cask 'tower'
 cask 'virtualbox'
+cask 'vlc'
 
 # X11
 tap 'homebrew/x11'
