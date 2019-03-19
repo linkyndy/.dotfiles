@@ -22,9 +22,7 @@ brew 'awscli'
 brew 'heroku'
 
 # Docker
-brew 'docker'
-brew 'docker-machine'
-brew 'docker-compose'
+cask 'docker'
 
 # Databases/datastores
 brew 'mysql'      , restart_service: true
