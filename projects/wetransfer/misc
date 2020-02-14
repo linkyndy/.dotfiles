@@ -1,3 +1,9 @@
 # Use older versions for imagemagick and mysql
-export PATH=$PATH:$(brew --prefix imagemagick@6)/bin
-export PATH=$PATH:$(brew --prefix mysql@5.6)/bin
+export PATH=$PATH:/usr/local/opt/imagemagick@6/bin
+export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
+export PATH=$PATH:/usr/local/opt/node@8/bin
+
+# Needed for Crystal
+export LIBRARY_PATH=/usr/local/opt/openssl/lib/
+
+export AWS_PROFILE=wetransfer-dev-admin
