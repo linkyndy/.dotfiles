@@ -19,6 +19,11 @@ git_info() {
   fi
 }
 
+k8s_info() {
+  ctx=$(kubectl config current-context)
+  echo " on %{$fg[blue]%}k8s $ctx%{$reset_color%}"
+}
+
 ruby_info() {
   # Show the current rbenv ruby, if set for shell/locally
   if [[ -n $RBENV_VERSION || -n $(rbenv local 2> /dev/null) ]]; then
@@ -49,5 +54,5 @@ node_info() {
 
 # Have a nicer prompt: USER at HOST in PWD[ on GIT][ with RUBY][ with PYTHON][ with ELIXIR][ with NODE]
 PROMPT='
-%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%} in %{$fg[yellow]%}$(enhanced_pwd)%{$reset_color%}$(git_info)$(ruby_info)$(python_info)$(elixir_info)$(node_info)
+%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%} in %{$fg[yellow]%}$(enhanced_pwd)%{$reset_color%}$(git_info)$(k8s_info)$(ruby_info)$(python_info)$(elixir_info)$(node_info)
 %(?:$ :%{$fg[red]%}!%{$reset_color%} )'
