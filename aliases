@@ -26,9 +26,15 @@ alias gd='git diff'
 alias glps='git pretty -n 10'
 alias glpg='git pretty --graph'
 
+# Kubernetes
+alias k='kubectl'
+
 # Ruby
 alias b='bundle'
 alias be='bundle exec'
+alias ber='bundle exec rspec'
+alias berm='bundle exec rails db:migrate && RAILS_ENV=test bundle exec rails db:migrate'
+alias berr='bundle exec rails db:rollback && RAILS_ENV=test bundle exec rails db:rollback'
 
 # Handy commands
 alias reload='. ~/.zshrc'
