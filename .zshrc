@@ -2,7 +2,7 @@
 # GENERAL #
 ###########
 
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 export EDITOR=atom
 export GIT_EDITOR=nano
 # Enable colors
@@ -24,9 +24,10 @@ autoload -U age
 
 # Configure history
 HISTFILE=~/.zhistory
-HISTSIZE=10000
-SAVEHIST=50000
+HISTSIZE=500000
+SAVEHIST=1000000
 setopt incappendhistory
+setopt no_share_history
 
 #######
 # ZSH #
