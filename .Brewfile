@@ -21,7 +21,8 @@ brew 'zsh-completions'
 brew 'awscli'
 brew 'heroku'
 
-# Docker
+# Docker & K8s
+brew 'tfenv'
 cask 'docker'
 
 # Databases/datastores
