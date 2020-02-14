@@ -1,2 +1,0 @@
-alias bbc='bundle exec foreman run -e .env-aio.dev rails c'
-alias bbs='bundle exec foreman run -e .env-aio.dev rails s'

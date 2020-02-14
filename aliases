@@ -45,9 +45,6 @@ alias modified-today='print *(e:age today now:)'
 alias top-commands='print -l -- ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 alias r='history | grep'
 
-# Borrowing Base aliases
-# . ~/.dotfiles/projects/borrowing_base/aliases
-
 # Tiqets aliases
 # . ~/.dotfiles/projects/tiqets/aliases
 
