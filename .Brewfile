@@ -82,5 +82,4 @@ cask 'virtualbox'
 cask 'vlc'
 
 # X11
-tap 'homebrew/x11'
 cask 'xquartz'
