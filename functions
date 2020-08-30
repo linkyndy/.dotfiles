@@ -89,6 +89,21 @@ current-branch() {
   echo ${ref#refs/heads/}
 }
 
+clean-branches() {
+  git remote prune origin
+
+  branches=$(git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}')
+
+  echo $branches
+  echo -n "Proceed cleaning the above branches?"
+
+  read
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+      echo $branches | xargs git branch -d
+  fi
+}
+
 gdm() {
   git diff --name-only master..$(current-branch)
 }
