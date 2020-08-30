@@ -22,6 +22,7 @@ brew 'awscli'
 brew 'heroku'
 
 # Docker & K8s
+brew 'kubernetes-cli'
 brew 'tfenv'
 cask 'docker'
 
