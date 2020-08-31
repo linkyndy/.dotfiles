@@ -18,6 +18,7 @@ brew 'zsh'
 brew 'zsh-completions'
 
 # Iaas/Paas
+tap 'heroku/brew'
 brew 'awscli'
 brew 'heroku'
 
