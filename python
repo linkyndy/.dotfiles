@@ -1,4 +1,4 @@
 # Enable shims and autocompletion for pyenv and pyenv-virtualenv and remove default prompt
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
