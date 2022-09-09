@@ -18,20 +18,19 @@ brew 'zsh'
 brew 'zsh-completions'
 
 # Iaas/Paas
-tap 'heroku/brew'
 brew 'awscli'
-brew 'heroku'
 
 # Docker & K8s
 brew 'kubernetes-cli'
+brew 'stern'
 brew 'tfenv'
 cask 'docker'
+cask 'lens'
 
 # Databases/datastores
 brew 'mysql'      , restart_service: true
 brew 'postgresql' , restart_service: true
 brew 'redis'      , restart_service: true
-brew 'rethinkdb'
 brew 'sqlite'
 cask 'postico'
 cask 'sequel-pro'
@@ -46,10 +45,6 @@ brew 'qt'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 
-# Elixir
-brew 'exenv'
-brew 'elixir-build'
-
 # JavaScript
 brew 'nodenv'
 
@@ -58,6 +53,7 @@ brew 'git-standup'
 brew 'hub'
 brew 'htop'
 brew 'httpie'
+brew 'jq'
 brew 'spark'
 brew 'tldr'
 brew 'tree'
@@ -67,6 +63,7 @@ brew 'wrk'
 cask 'insomnia'
 cask 'ngrok'
 cask 'shimo'
+cask 'stoplight-studio'
 
 # Fun
 brew 'cowsay'
@@ -78,11 +75,14 @@ cask 'caret'
 cask 'firefox'
 cask 'google-chrome'
 cask 'kaleidoscope'
+cask 'messenger'
+cask 'notion'
 cask 'slack'
 cask 'spotify'
 cask 'tower'
 cask 'virtualbox'
 cask 'vlc'
+cask 'whatsapp'
 
 # X11
 cask 'xquartz'
