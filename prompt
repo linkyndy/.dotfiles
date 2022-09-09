@@ -55,7 +55,7 @@ elixir_info() {
 node_info() {
   # Show the current nodenv node, if set for shell/locally
   if [[ -n $NODENV_VERSION || -n $(nodenv local 2> /dev/null) ]]; then
-    echo " with %{$fg[green]%}node $(nodenv version-name)%{$reset_color%}"
+    echo " with %{$fg[yellow]%}node $(nodenv version-name)%{$reset_color%}"
   fi
 }
 
