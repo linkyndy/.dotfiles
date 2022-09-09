@@ -103,5 +103,6 @@ preexec () {
 
 . ~/.dotfiles/ruby
 . ~/.dotfiles/python
+. ~/.dotfiles/crystal
 # . ~/.dotfiles/elixir
 . ~/.dotfiles/node
