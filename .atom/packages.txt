@@ -1,2 +1,10 @@
-highlight-selected@0.11.1
-ruby-block@0.3.5
+git-blame
+highlight-selected
+language-crystal-actual
+language-docker
+language-elixir
+language-lua
+language-terraform
+language-vue
+pretty-json
+ruby-block
