@@ -2,7 +2,9 @@
 # GENERAL #
 ###########
 
-export PATH="$HOME/.bin:/usr/local/sbin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PATH="$HOME/.bin:$PATH"
 export EDITOR=atom
 export GIT_EDITOR=nano
 # Enable colors
