@@ -80,7 +80,6 @@ cask 'notion'
 cask 'slack'
 cask 'spotify'
 cask 'tower'
-cask 'virtualbox'
 cask 'vlc'
 cask 'whatsapp'
 
