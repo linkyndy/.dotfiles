@@ -1,3 +1,0 @@
-export PATH="$HOME/.crenv/bin:$PATH"
-# Enable shims and autocompletion for crenv
-eval "$(crenv init -)"

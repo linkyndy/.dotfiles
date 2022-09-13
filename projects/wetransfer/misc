@@ -5,8 +5,4 @@ export PATH=$PATH:/usr/local/opt/node@8/bin
 export PATH=/usr/local/opt/awscli@1/bin:$PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-# Needed for Crystal
-export LIBRARY_PATH=/usr/local/opt/openssl/lib/
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
-
 export AWS_PROFILE=wetransfer-dev-admin
