@@ -64,7 +64,7 @@ bindkey -e
 ##############
 
 # Activate zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/opt/homebrew/share/zsh-completions $fpath)
 
 # Configure completion
 autoload -Uz compinit
