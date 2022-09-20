@@ -1,8 +1,13 @@
 # Use older versions for imagemagick and mysql
-export PATH=$PATH:/usr/local/opt/imagemagick@6/bin
-export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
-export PATH=$PATH:/usr/local/opt/node@8/bin
-export PATH=/usr/local/opt/awscli@1/bin:$PATH
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH=$PATH:/opt/homebrew/opt/imagemagick@6/bin
+export PATH=$PATH:/opt/homebrew/opt/mysql@5.7/bin
+export PATH=$PATH:/opt/homebrew/opt/node@8/bin
+export PATH=/opt/homebrew/opt/awscli@1/bin:$PATH
+
+# Make openssl work with various compilers
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
 
 export AWS_PROFILE=wetransfer-dev-admin
