@@ -1,3 +1,6 @@
 # Hot bottom-right corner: put display to sleep
 defaults write com.apple.dock wvous-br-corner -int 10
 defaults write com.apple.dock wvous-br-modifier -int 0
+
+# Disable IPv6, to avoid the trouble with some VPNs
+networksetup -setv6off Wi-Fi
