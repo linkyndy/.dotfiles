@@ -1,6 +1,9 @@
 # Install apps to /Applications
 cask_args appdir: '/Applications'
 
+# We need to install some older casks, due to licensing
+tap 'homebrew/cask-versions'
+
 # Vitals
 brew 'git'
 brew 'coreutils'
@@ -74,7 +77,7 @@ brew 'spark'
 cask 'caret'
 cask 'firefox'
 cask 'google-chrome'
-cask 'kaleidoscope'
+cask 'kaleidoscope2'
 cask 'messenger'
 cask 'notion'
 cask 'slack'
