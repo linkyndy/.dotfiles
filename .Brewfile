@@ -10,6 +10,7 @@ brew 'coreutils'
 brew 'ctags'
 brew 'dnsmasq' # Start service with sudo
 brew 'gcc'
+brew 'gh'
 brew 'imagemagick'
 brew 'nginx' # Start service with sudo
 brew 'openssl'
