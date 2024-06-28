@@ -39,7 +39,7 @@ alias berr='bundle exec rails db:rollback && RAILS_ENV=test bundle exec rails db
 # Handy commands
 alias reload='. ~/.zshrc'
 alias path='echo $PATH | tr -s ":" "\n"'
-alias brup='brew update && brew upgrade --ignore-pinned --display-times && brew doctor'
+alias brup='brew update && brew upgrade --display-times && brew doctor'
 alias newest-dir='ls -ld *(/om[1])'
 alias modified-today='print *(e:age today now:)'
 alias top-commands='print -l -- ${(o)history%% *} | uniq -c | sort -nr | head -n 10'

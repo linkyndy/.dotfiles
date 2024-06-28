@@ -1,9 +1,6 @@
 # Install apps to /Applications
 cask_args appdir: '/Applications'
 
-# We need to install some older casks, due to licensing
-tap 'homebrew/cask-versions'
-
 # Vitals
 brew 'git'
 brew 'coreutils'
@@ -14,6 +11,7 @@ brew 'gh'
 brew 'imagemagick'
 brew 'nginx' # Start service with sudo
 brew 'openssl'
+# TODO: This is deprecated; consider replacing
 cask 'atom'
 cask 'iterm2'
 
@@ -37,7 +35,6 @@ brew 'postgresql' , restart_service: true
 brew 'redis'      , restart_service: true
 brew 'sqlite'
 cask 'postico'
-cask 'sequel-pro'
 
 # Ruby
 brew 'ruby-build'
@@ -70,12 +67,10 @@ cask 'shimo'
 cask 'stoplight-studio'
 
 # Fun
-brew 'cowsay'
 brew 'hr'
 brew 'spark'
 
 # Apps
-cask 'caret'
 cask 'firefox'
 cask 'google-chrome'
 cask 'kaleidoscope2'
