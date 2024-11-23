@@ -1,6 +1,7 @@
 [user]
 	name = Andrei Horak
 	email = linkyndy@gmail.com
+	signingkey = ECFCFD0B852D8FDF55820CD4285A49E0CFE7416C
 [alias]
 	branches = branch -a
 	tags = tag -l
@@ -49,3 +50,7 @@
 [push]
 	# Push the current branch to update a branch with the same name on the receiving end
 	default = current
+[commit]
+	gpgsign = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
