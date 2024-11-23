@@ -24,8 +24,9 @@
 	tool = Kaleidoscope
 [difftool]
 	prompt = false
+	trustExitCode = true
 [difftool "Kaleidoscope"]
-	cmd = "ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\""
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [filter "media"]
 	required = true
 	clean = git media clean %f
@@ -43,7 +44,7 @@
 [mergetool]
 	prompt = false
 [mergetool "Kaleidoscope"]
-	cmd = "ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot"
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
 [push]
 	# Push the current branch to update a branch with the same name on the receiving end
