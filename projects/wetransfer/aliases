@@ -1,0 +1,4 @@
+alias kcd='k config use-context kubernetes.wetransferalpha.net'
+alias kcs='k config use-context kubernetes.wetransferbeta.net'
+alias kcpe='k config use-context kubernetes.wetransfer.net'
+alias kcpu='k config use-context kubernetes-useast1.wetransfer.net'
