@@ -9,6 +9,7 @@ brew 'dnsmasq' # Start service with sudo
 brew 'gcc'
 brew 'gh'
 brew 'imagemagick'
+brew 'gpg'
 brew 'nginx' # Start service with sudo
 brew 'openssl'
 cask 'iterm2'
