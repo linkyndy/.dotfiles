@@ -73,7 +73,7 @@ brew 'spark'
 # Apps
 cask 'firefox'
 cask 'google-chrome'
-cask 'kaleidoscope2'
+cask 'kaleidoscope'
 cask 'messenger'
 cask 'notion'
 cask 'slack'
