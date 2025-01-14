@@ -11,9 +11,8 @@ brew 'gh'
 brew 'imagemagick'
 brew 'nginx' # Start service with sudo
 brew 'openssl'
-# TODO: This is deprecated; consider replacing
-cask 'atom'
 cask 'iterm2'
+cask 'zed'
 
 # ZSH
 brew 'zsh'

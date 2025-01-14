@@ -5,7 +5,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PATH="$HOME/.bin:$PATH"
-export EDITOR=atom
+export EDITOR=zed
 export GIT_EDITOR=nano
 # Enable colors
 export LSCOLORS=Gxfxcxdxbxegedabagacad

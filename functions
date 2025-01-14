@@ -9,7 +9,7 @@ dotfiles-up() {
 }
 
 dotfiles-edit() {
-  atom ~/.dotfiles
+  zed ~/.dotfiles
 }
 
 mkcd() {

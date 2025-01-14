@@ -33,20 +33,14 @@ ln -sf "$HOME/.dotfiles/.zshrc" "$HOME"
 ln -sf "$HOME/.dotfiles/.gemrc" "$HOME"
 ln -sf "$HOME/.dotfiles/.gitconfig" "$HOME"
 ln -sf "$HOME/.dotfiles/.Brewfile" "$HOME"
-ln -sfF "$HOME/.dotfiles/.atom" "$HOME"
+mkdir -p "$HOME/.config/zed"
+ln -sf "$HOME/.dotfiles/zed/settings.json" "$HOME/.config/zed/settings.json"
 
 echo "Configuring macOS..."
 . "$HOME/.dotfiles/macos"
 
 echo "Installing Homebrew Bundle formulae..."
 brew bundle --global
-
-if [ ! $(apm list --installed --bare | sed '/^$/d' | wc -l) -eq $(cat "$HOME/.dotfiles/.atom/packages.txt" | wc -l) ]; then
-  echo "Installing Atom packages..."
-  apm install --packages-file "$HOME/.dotfiles/.atom/packages.txt"
-else
-  echo "Atom packages already installed"
-fi
 
 if ! rbenv versions | grep -q "$ruby_version"; then
   echo "Installing Ruby $ruby_version..."
