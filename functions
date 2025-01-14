@@ -112,4 +112,4 @@ gdm() {
 # . ~/.dotfiles/projects/tiqets/functions
 
 # WeTransfer functions
-. ~/.dotfiles/projects/wetransfer/functions
+# . ~/.dotfiles/projects/wetransfer/functions

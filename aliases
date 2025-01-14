@@ -49,4 +49,4 @@ alias r='history | grep'
 # . ~/.dotfiles/projects/tiqets/aliases
 
 # WeTransfer aliases
-. ~/.dotfiles/projects/wetransfer/aliases
+# . ~/.dotfiles/projects/wetransfer/aliases
