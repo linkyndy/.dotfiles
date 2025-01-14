@@ -20,8 +20,10 @@ git_info() {
 }
 
 k8s_info() {
-  ctx=$(kubectl config current-context)
-  echo " on %{$fg[blue]%}k8s $ctx%{$reset_color%}"
+  # Show the current k8s context, if set
+  if [[ -n $(kubectl config current-context 2> /dev/null) ]]; then
+    echo " on %{$fg[blue]%}k8s $(kubectl config current-context)%{$reset_color%}"
+  fi
 }
 
 ruby_info() {
