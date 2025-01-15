@@ -8,7 +8,6 @@ brew 'ctags'
 brew 'dnsmasq' # Start service with sudo
 brew 'gcc'
 brew 'gh'
-brew 'imagemagick'
 brew 'gpg'
 brew 'nginx' # Start service with sudo
 brew 'openssl'
@@ -50,7 +49,6 @@ brew 'pyenv-virtualenv'
 brew 'nodenv'
 
 # Nice-to-have
-brew 'git-standup'
 brew 'hub'
 brew 'htop'
 brew 'httpie'
@@ -63,10 +61,9 @@ brew 'the_silver_searcher'
 brew 'wrk'
 cask 'insomnia'
 cask 'ngrok'
-cask 'shimo'
-cask 'stoplight-studio'
 
 # Fun
+brew 'cowsay'
 brew 'hr'
 brew 'spark'
 
@@ -76,9 +73,11 @@ cask 'google-chrome'
 cask 'kaleidoscope'
 cask 'messenger'
 cask 'notion'
+cask 'rekordbox'
 cask 'slack'
 cask 'spotify'
 cask 'tower'
+cask 'transmission'
 cask 'vlc'
 cask 'whatsapp'
 
