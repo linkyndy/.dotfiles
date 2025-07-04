@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "model_parameters": [],
+    "default_model": {
+      "provider": "vercel",
+      "model": "v0-1.5-md"
+    },
+    "version": "2"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "autosave": "on_focus_change",
   "base_keymap": "Atom",
   "confirm_quit": false,
