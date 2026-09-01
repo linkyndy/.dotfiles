@@ -2,5 +2,11 @@
 defaults write com.apple.dock wvous-br-corner -int 10
 defaults write com.apple.dock wvous-br-modifier -int 0
 
+# Dock customization
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Finder customization
+defaults write com.apple.finder ShowStatusBar -bool true
+
 # Disable IPv6, to avoid the trouble with some VPNs
 networksetup -setv6off Wi-Fi
