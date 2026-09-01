@@ -13,7 +13,7 @@ else
 fi
 
 echo "Updating Homebrew formulae..."
-brew update --force
+brew update-if-needed
 
 echo "Installing prerequisites..."
 if ! brew list -1 | grep -q "git"; then
