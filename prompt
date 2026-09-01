@@ -40,13 +40,6 @@ python_info() {
   fi
 }
 
-elixir_info() {
-  # Show the current exenv elixir, if set for shell/locally
-  if [[ -n $EXENV_VERSION || -n $(exenv local 2> /dev/null) ]]; then
-    echo " with %{$fg[magenta]%}elixir $(exenv version-name)%{$reset_color%}"
-  fi
-}
-
 node_info() {
   # Show the current nodenv node, if set for shell/locally
   if [[ -n $NODENV_VERSION || -n $(nodenv local 2> /dev/null) ]]; then
@@ -54,7 +47,7 @@ node_info() {
   fi
 }
 
-# Have a nicer prompt: USER at HOST in PWD[ on GIT][ on K8S][ with RUBY][ with PYTHON][ with ELIXIR][ with NODE]
+# Have a nicer prompt: USER at HOST in PWD[ on GIT][ on K8S][ with RUBY][ with PYTHON][ with NODE]
 PROMPT='
-%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%} in %{$fg[yellow]%}$(enhanced_pwd)%{$reset_color%}$(git_info)$(k8s_info)$(ruby_info)$(python_info)$(elixir_info)$(node_info)
+%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[cyan]%}%m%{$reset_color%} in %{$fg[yellow]%}$(enhanced_pwd)%{$reset_color%}$(git_info)$(k8s_info)$(ruby_info)$(python_info)$(node_info)
 %(?:$ :%{$fg[red]%}!%{$reset_color%} )'

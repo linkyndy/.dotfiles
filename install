@@ -2,7 +2,6 @@
 
 ruby_version="3.4.1"
 python_version="3.13.1"
-elixir_version="1.10.0"
 nodenv_version="23.6.0"
 
 if ! command -v brew >/dev/null; then
@@ -72,16 +71,6 @@ fi
 
 echo "Setting default Python..."
 pyenv global "$python_version"
-
-if ! exenv versions | grep -q "$elixir_version"; then
-  echo "Installing Elixir $elixir_version..."
-  exenv install "$elixir_version"
-else
-  echo "Elixir $elixir_version already installed"
-fi
-
-echo "Setting default Elixir..."
-exenv global "$elixir_version"
 
 if ! nodenv versions | grep -q "$nodenv_version"; then
   echo "Installing Node $nodenv_version..."

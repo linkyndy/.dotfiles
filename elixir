@@ -1,3 +1,0 @@
-export PATH="$HOME/.exenv/bin:$PATH"
-# Enable shims and autocompletion for exenv
-eval "$(exenv init -)"
