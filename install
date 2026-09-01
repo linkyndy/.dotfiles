@@ -39,7 +39,7 @@ echo "Configuring macOS..."
 . "$HOME/.dotfiles/macos"
 
 echo "Installing Homebrew Bundle formulae..."
-brew bundle --global
+brew bundle --file="$HOME/.dotfiles/.Brewfile"
 
 if ! rbenv versions | grep -q "$ruby_version"; then
   echo "Installing Ruby $ruby_version..."
