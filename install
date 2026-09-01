@@ -1,8 +1,8 @@
 #!/bin/sh
 
-ruby_version="3.4.1"
-python_version="3.13.1"
-node_version="23.6.0"
+ruby_version="4.0.6"
+python_version="3.14.7"
+node_version="24.20.0"
 
 if ! command -v brew >/dev/null; then
   echo "Installing Homebrew..."
