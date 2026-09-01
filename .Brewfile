@@ -20,12 +20,12 @@ brew 'zsh-completions'
 
 # Iaas/Paas
 brew 'awscli'
+brew 'vercel'
 
 # Docker & K8s
 brew 'kubernetes-cli'
 brew 'stern'
 brew 'tfenv'
-cask 'docker'
 cask 'lens'
 
 # Databases/datastores
@@ -34,6 +34,10 @@ brew 'postgresql' , restart_service: true
 brew 'redis'      , restart_service: true
 brew 'sqlite'
 cask 'postico'
+
+# AI
+cask 'chatgpt'
+cask 'codex'
 
 # Ruby
 brew 'ruby-build'
@@ -49,14 +53,11 @@ brew 'pyenv-virtualenv'
 brew 'nodenv'
 
 # Nice-to-have
-brew 'hub'
 brew 'htop'
 brew 'httpie'
 brew 'jq'
-brew 'spark'
 brew 'tree'
 brew 'watch'
-brew 'the_silver_searcher'
 brew 'wrk'
 cask 'insomnia'
 cask 'ngrok'
@@ -67,10 +68,11 @@ brew 'hr'
 brew 'spark'
 
 # Apps
+cask 'figma'
 cask 'firefox'
 cask 'google-chrome'
 cask 'kaleidoscope'
-cask 'messenger'
+cask 'nordvpn'
 cask 'notion'
 cask 'rekordbox'
 cask 'slack'
@@ -79,6 +81,7 @@ cask 'tower'
 cask 'transmission'
 cask 'vlc'
 cask 'whatsapp'
+cask 'zoom'
 
 # X11
 cask 'xquartz'
