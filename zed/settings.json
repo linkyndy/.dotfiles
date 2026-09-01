@@ -7,16 +7,35 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "zed"
+  },
+  "agent_servers": {
+    
+  },
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "agent": {
+    "dock": "right",
+    "default_profile": "write",
     "model_parameters": [],
     "default_model": {
-      "provider": "vercel",
-      "model": "v0-1.5-md"
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "openai-subscribed",
+      "model": "gpt-5.6-sol"
     },
-    "version": "2"
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
   },
   "autosave": "on_focus_change",
   "base_keymap": "Atom",
