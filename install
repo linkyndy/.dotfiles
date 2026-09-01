@@ -2,7 +2,7 @@
 
 ruby_version="3.4.1"
 python_version="3.13.1"
-nodenv_version="23.6.0"
+node_version="23.6.0"
 
 if ! command -v brew >/dev/null; then
   echo "Installing Homebrew..."
@@ -72,15 +72,15 @@ fi
 echo "Setting default Python..."
 pyenv global "$python_version"
 
-if ! nodenv versions | grep -q "$nodenv_version"; then
-  echo "Installing Node $nodenv_version..."
-  nodenv install "$nodenv_version"
+if ! nodenv versions | grep -q "$node_version"; then
+  echo "Installing Node $node_version..."
+  nodenv install "$node_version"
 else
-  echo "Node $nodenv_version already installed"
+  echo "Node $node_version already installed"
 fi
 
 echo "Setting default Node..."
-nodenv global "$nodenv_version"
+nodenv global "$node_version"
 
 case "$SHELL" in
   */zsh) : ;;
