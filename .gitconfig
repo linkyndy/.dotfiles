@@ -19,8 +19,6 @@
 	ui = true
 [credential]
 	helper = osxkeychain
-[core]
-	editor = vi
 [diff]
 	tool = Kaleidoscope
 [difftool]
