@@ -3,3 +3,6 @@
 
 # WeTransfer misc
 # . ~/.dotfiles/projects/wetransfer/misc
+
+# Cleo misc
+. ~/.dotfiles/projects/cleo/misc

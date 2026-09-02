@@ -50,3 +50,6 @@ alias r='history | grep'
 
 # WeTransfer aliases
 # . ~/.dotfiles/projects/wetransfer/aliases
+
+# Cleo aliases
+. ~/.dotfiles/projects/cleo/aliases

@@ -113,3 +113,6 @@ gdm() {
 
 # WeTransfer functions
 # . ~/.dotfiles/projects/wetransfer/functions
+
+# Cleo functions
+. ~/.dotfiles/projects/cleo/functions
