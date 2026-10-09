@@ -36,6 +36,8 @@ mkdir -p "$HOME/.codex"
 ln -sf "$HOME/.dotfiles/codex/AGENTS.md" "$HOME/.codex/AGENTS.md"
 mkdir -p "$HOME/.config/zed"
 ln -sf "$HOME/.dotfiles/zed/settings.json" "$HOME/.config/zed/settings.json"
+mkdir -p "$HOME/.config/solargraph"
+ln -sf "$HOME/.dotfiles/solargraph/config.yml" "$HOME/.config/solargraph/config.yml"
 
 echo "Configuring macOS..."
 . "$HOME/.dotfiles/macos"

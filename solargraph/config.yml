@@ -1,0 +1,2 @@
+# We need to increase this limit so Solargraph covers larger projects as well
+max_files: 25000
